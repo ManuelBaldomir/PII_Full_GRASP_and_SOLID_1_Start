@@ -15,7 +15,7 @@ namespace Full_GRASP_And_SOLID.Library
             this.Time = time;
             this.Equipment = equipment;
         }
-
+        
         public Product Input { get; set; }
 
         public double Quantity { get; set; }

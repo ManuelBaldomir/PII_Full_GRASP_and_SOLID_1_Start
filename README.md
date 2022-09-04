@@ -20,6 +20,7 @@ Costo total = costo insumos + costo equipamiento
 
 ➡️ **¿Qué patrón o principio usan para asignar esta responsabilidad?**
 Escriban la respuesta en comentarios en el código.
+(respuesta en la clase Recipe)
 
 
 ➡️ **Agregar al final de la impresión de la receta el costo total de producción que se obtiene usando el método recién agregado.**

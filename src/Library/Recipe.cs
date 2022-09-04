@@ -25,6 +25,22 @@ namespace Full_GRASP_And_SOLID.Library
             this.steps.Remove(step);
         }
 
+        // RESPUESTA 2)
+        // Aplico el principio Expert ya que la clase Recipe posee toda la información necesaria
+        // utilizar el método GetProductionCost() 
+        public double GetProductionCost()
+        {
+            double costProducts = 0;
+            double costEquipment = 0;
+
+            foreach (Step st in steps)
+            {
+                costProducts += (st.Input.UnitCost * st.Quantity);
+                costEquipment += (st.Equipment.HourlyCost * st.Time);
+            }
+            return (costEquipment + costProducts);
+        }
+
         public void PrintRecipe()
         {
             Console.WriteLine($"Receta de {this.FinalProduct.Description}:");
@@ -33,6 +49,7 @@ namespace Full_GRASP_And_SOLID.Library
                 Console.WriteLine($"{step.Quantity} de '{step.Input.Description}' " +
                     $"usando '{step.Equipment.Description}' durante {step.Time}");
             }
+            Console.WriteLine($"Costo total de producción: ${GetProductionCost()}");
         }
     }
 }
